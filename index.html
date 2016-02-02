@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CV Maker</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="./style.css"/>
+		<script type="text/javascript" src="https://rawgit.com/gwendall/way.js/master/way.min.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="left-wrapper" class="container">
+				<h2>Markdown CV Maker</h2>
+				<form id="inputData" way-data="inputData" way-persistent class="form-group">
+					<fieldset class="form-group">
+						<label>Full Name</label>
+						<input class="form-control" name="fullName">
+						<label>Email</label>
+						<input class="form-control" name="email">
+						<label>Avatar URL</label>
+						<input class="form-control" name="avatar">
+					</fieldset>
+					<hr>
+					<fieldset class="form-group">
+						<label>Title</label><input class="form-control" name="title">
+						<label>Location</label><input class="form-control" name="location">
+						<label>Homepage</label><input class="form-control" name="homepage">
+						<label>Twitter</label><input class="form-control" name="twitter">
+						<label>Tech you like to work with</label><input class="form-control" name="tech">
+					</fieldset>
+					<hr>
+					<fieldset class="form-group">
+						<label>About</label>
+						<textarea class="form-control" name="about" rows="4"></textarea>
+					</fieldset>
+					<hr>
+					<fieldset class="form-group">
+						<h3>Experience</h3>
+						<button way-action-push="inputData.experience" class="btn btn-primary">Add Experience</button>
+						<fieldset class="form-group" way-repeat="inputData.experience">
+							<label>Title</label>
+							<input class="form-control" way-presistent way-data="title" placeholder="Job title or something of that sorts">
+							<fieldset class="form-group form-inline">
+								<label>Since</label>
+								<input class="form-control" way-presistent way-data="since" placeholder="Some year">
+								<label>Till</label>
+								<input class="form-control" way-presistent way-data="till" placeholder="Defaults to current">
+							</fieldset>
+							<label>Tech involved</label>
+							<input class="form-control" way-presistent way-data="tech" placeholder="tech, you, worked, with">
+							<label>Details</label>
+							<textarea class="form-control" way-presistent way-data="about" placeholder="Explain your role etc."></textarea>
+							<button way-action-remove="inputData.experience.$$key" way-persistent class="btn btn-danger">Remove</button>
+						</fieldset>
+					</fieldset>
+					<hr>
+					<h3>Education</h3>
+					<button way-action-push="inputData.education" class="btn btn-primary">Add Education</button>
+					<fieldset class="form-group" way-repeat="inputData.education">
+						<label>Title</label>
+						<input class="form-control" way-persistent way-data="title" placeholder="Your course name?">
+						<fieldset class="form-group">
+							<label>Since</label>
+							<input class="form-control" way-persistent way-data="since" placeholder="Admitted in year?">
+							<label>Till</label>
+							<input class="form-control" way-persistent way-data="till" placeholder="Graduate(d) at?">
+						</fieldset>
+						<label>Tech involved</label>
+						<input class="form-control" way-persistent way-data="tech" placeholder="C, Java, PHP">
+						<label>Details</label>
+						<textarea class="form-control" way-persistent way-data="about" placeholder="Your heroic tales or skipping classes"></textarea>
+						<button way-action-remove="inputData.education.$$key" way-persistent class="btn btn-danger">Remove</button>
+					</fieldset>
+					<hr>
+					<fieldset class="form-group">
+						<h3>Open Source</h3>
+						<button way-action-push="inputData.projects" class="btn btn-primary">Add project</button>
+						<fieldset class="form-group" way-repeat="inputData.projects">
+							<label>Title</label><input class="form-control" way-persistent way-data="title" placeholder="Title">
+							<label>URL</label><input class="form-control" way-persistent way-data="url" placeholder="https://github.com/yourname/something">
+							<label>Details</label><textarea class="form-control" way-persistent way-data="desc" placeholder="boast about number of kitten gifs in readme here"></textarea>
+							<button way-action-remove="inputData.projects.$$key" way-persistent class="btn btn-danger">Remove</button>
+						</fieldset>
+					</fieldset>
+					<hr>
+					<fieldset class="form-group">
+						<h3>Writing</h3>
+						<label>Your writing habits</label>
+						<textarea class="form-control" name="writingHabits" placeholder="we know you love blogging and that you are busy"></textarea>
+						<button way-action-push="inputData.writing" class="btn btn-primary">Add</button>
+						<fieldset class="form-group" way-repeat="inputData.writing">
+							<label>Title</label>
+							<input class="form-control" way-persistent way-data="title" placeholder="what do you like to call it?">
+							<label>URL</label>
+							<input class="form-control" way-persistent way-data="url" placeholder="links or it didn't happen">
+							<button way-action-remove="inputData.writing.$$key" way-persistent class="btn btn-danger">Remove</button>
+						</fieldset>
+					</fieldset>
+					<hr>
+					<fieldset class="form-group">
+						<h3>Favorites</h3>
+						<label>Editor</label>
+						<input class="form-control" name="editor" placeholder="You have to write it only once, we will get it">
+						<label>Operating System</label>
+						<input class="form-control" name="os" placeholder="This too">
+						<label>Terminal</label>
+						<input class="form-control" name="terminal" placeholder="And we know your favs are the best">
+					</fieldset>
+					<hr>
+				</form>
+			</div>
+			<div id="right-wrapper">
+				<div class="container">
+					<button class="btn btn-default" id="btnMd">Markdown</button>
+					<button class="btn btn-default" id="btnLive">Live Preview</button>
+					<button class="btn btn-success" id="btnDownload">Download Raw Markdown</button>
+				</div>
+				<pre id="previewer"></pre>
+				<div id="live-preview" class="hidden"></div>
+			</div>
+		</div>
+		<script src="./src.js"></script>
+		<script src="https://rawgit.com/chjj/marked/master/lib/marked.js"></script>
+	</body>
+</html>

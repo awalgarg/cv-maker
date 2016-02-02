@@ -1,0 +1,31 @@
+*, *:after, *:before {
+	box-sizing: border-box!important;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
+#wrapper {
+	display: flex;
+}
+
+#right-wrapper, #left-wrapper {
+	height: 100vh;
+	overflow: auto;
+	width: 50vw;
+}
+
+.hidden {
+	display: none!important;
+}
+
+#live-preview {
+	padding: 1rem;
+}
