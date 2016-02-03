@@ -4,6 +4,8 @@ this app makes a markdown only resume that looks elegant and simple everywhere
 
 try it out here: http://awal.js.org/cv-maker/
 
+see an example CV here: https://gist.github.com/awalGarg/a8e97b27b249f2c94f8e
+
 # philosophy
 
 Stackoverflow had a side project called "Careers Stackoverflow". They had a very decent resume builder. The output it produced was elegant, and easy on eyes. It wasn't bloated with ads and didn't look shit on small screens. Unfortunately, it seems that they are converting it to some Facebook timeline like [story thing](http://meta.stackoverflow.com/questions/313960/introducing-the-developer-story). The community there doesn't like that decision either.
