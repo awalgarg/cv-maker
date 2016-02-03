@@ -4,7 +4,7 @@ this app makes a markdown only resume that looks elegant and simple everywhere
 
 try it out here: http://awal.js.org/cv-maker/
 
-see an example CV here: https://gist.github.com/awalGarg/a8e97b27b249f2c94f8e
+see an example CV here: https://gist.github.com/awalGarg/a8e97b27b249f2c94f8e  
 Here is the same example in StackEdit's rendering format: https://stackedit.io/viewer#!url=https://gist.githubusercontent.com/awalGarg/a8e97b27b249f2c94f8e/raw/09e63fd69f2288cd631a492d392e8d114af7a432/res.md which looks much better
 
 # philosophy
