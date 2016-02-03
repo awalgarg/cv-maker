@@ -12,6 +12,7 @@ Renders in various markdown renderers:
 - [StackEdit](https://stackedit.io/viewer#!url=https://gist.githubusercontent.com/awalGarg/a8e97b27b249f2c94f8e/raw/09e63fd69f2288cd631a492d392e8d114af7a432/res.md)
 - [Notehub](https://notehub.org/tvpb6)
 - [Draft.sx](http://draft.sx/a8e97b27b249f2c94f8e)
+- [Markdownshare](https://markdownshare.com/view/6dfe5d69-36f7-4708-b9b8-d3ce7ffc1b77)
 - [Plain HTML](http://output.jsbin.com/gufitahisa)
 
 This just illustrates how versatile markdown (and thus this app) is!
