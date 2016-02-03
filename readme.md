@@ -13,7 +13,7 @@ Renders in various markdown renderers:
 - [Notehub](https://notehub.org/tvpb6)
 - [Draft.sx](http://draft.sx/a8e97b27b249f2c94f8e)
 - [Markdownshare](https://markdownshare.com/view/6dfe5d69-36f7-4708-b9b8-d3ce7ffc1b77)
-- [Plain HTML](http://output.jsbin.com/gufitahisa)
+- [Plain HTML](https://html.house/5hkj6wf5.html)
 
 This just illustrates how versatile markdown (and thus this app) is!
 
