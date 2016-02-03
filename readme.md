@@ -31,8 +31,8 @@ This is an attempt to recreate that editor. One bonus of this is that you don't 
 - you have to host it yourself or on github pages
 
 ### Optional tips
-- you can save that file as 'index.md', and put it in a github repository in the `gh-pages` branch.
-- the github page for that repository will now render your resume automatically!
+- http://stackedit.io/editor is a wonderful editor to further edit markdown
+- you can also directly copy paste the rendered HTML from there to a github pages repository!
 - it is not required at all, but would be appreciated if you put a little link to this repository at the bottom
 
 # TODO
