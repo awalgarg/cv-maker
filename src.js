@@ -192,6 +192,18 @@ way.watch('inputData', function (val) {
 });
 
 document.getElementById('btnDownload').addEventListener('click', downloadRaw);
+document.getElementById('btnExport').addEventListener('click', downloadJSON);
+
+function downloadJSON() {
+	var a = document.createElement('a');
+	a.download = 'cv.json';
+	var blob = new Blob([JSON.stringify(way.get('inputData'))], {type: 'application/json'});
+	var url = URL.createObjectURL(blob);
+	a.href = url;
+	document.body.appendChild(a);
+	a.click();
+	document.body.removeChild(a);
+}
 
 function downloadRaw () {
 	var a = document.createElement('a');
