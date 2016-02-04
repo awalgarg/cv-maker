@@ -173,6 +173,20 @@ var utils = {
 			return since + ' - ' + till;
 		}
 		return '';
+	},
+	downloadFromData: function downloadFromData(data, type, filename) {
+		var blob = new Blob([data], { type: type });
+		var url = URL.createObjectURL(blob);
+		var a = document.createElement('a');
+		a.download = filename;
+		a.href = url;
+		a.classList.add('hidden');
+		document.body.appendChild(a);
+		a.click();
+		document.body.removeChild(a);
+		setTimeout(function () {
+			return URL.revokeObjectURL(url);
+		}, 0);
 	}
 };
 
@@ -186,25 +200,11 @@ document.getElementById('btnDownload').addEventListener('click', downloadRaw);
 document.getElementById('btnExport').addEventListener('click', downloadJSON);
 
 function downloadJSON() {
-	var a = document.createElement('a');
-	a.download = 'cv.json';
-	var blob = new Blob([JSON.stringify(way.get('inputData'))], {type: 'application/json'});
-	var url = URL.createObjectURL(blob);
-	a.href = url;
-	document.body.appendChild(a);
-	a.click();
-	document.body.removeChild(a);
+	utils.downloadFromData(JSON.stringify(way.get('inputData'), null, ' '), 'application/json', 'cv.json');
 }
 
 function downloadRaw() {
-	var a = document.createElement('a');
-	a.download = 'cv.md';
-	var blob = new Blob([renderer(way.get('inputData'), reducers)], { type: 'text/plain' });
-	var url = URL.createObjectURL(blob);
-	a.href = url;
-	document.body.appendChild(a);
-	a.click();
-	document.body.removeChild(a);
+	utils.downloadFromData(renderer(way.get('inputData'), reducers), 'text/plain', 'cv.md');
 }
 
 document.getElementById('btnMd').addEventListener('click', function () {
@@ -225,3 +225,4 @@ function switchTab(to) {
 		prev.classList.add('hidden');
 	}
 }
+
