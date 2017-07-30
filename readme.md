@@ -4,6 +4,19 @@ this app makes a markdown only resume that looks elegant and simple everywhere
 
 try it out here: http://awal.js.org/cv-maker/
 
+# Example
+
+[Source](https://gist.githubusercontent.com/awalGarg/a8e97b27b249f2c94f8e/raw/09e63fd69f2288cd631a492d392e8d114af7a432/res.md)
+Renders in various markdown renderers:
+- [Github Gist](https://gist.github.com/awalGarg/a8e97b27b249f2c94f8e)
+- [StackEdit](https://stackedit.io/viewer#!url=https://gist.githubusercontent.com/awalGarg/a8e97b27b249f2c94f8e/raw/09e63fd69f2288cd631a492d392e8d114af7a432/res.md)
+- [Notehub](https://notehub.org/tvpb6)
+- [Draft.sx](http://draft.sx/a8e97b27b249f2c94f8e)
+- [Markdownshare](https://markdownshare.com/view/6dfe5d69-36f7-4708-b9b8-d3ce7ffc1b77)
+- [Plain HTML](https://html.house/5hkj6wf5.html)
+
+This just illustrates how versatile markdown (and thus this app) is!
+
 # philosophy
 
 Stackoverflow had a side project called "Careers Stackoverflow". They had a very decent resume builder. The output it produced was elegant, and easy on eyes. It wasn't bloated with ads and didn't look shit on small screens. Unfortunately, it seems that they are converting it to some Facebook timeline like [story thing](http://meta.stackoverflow.com/questions/313960/introducing-the-developer-story). The community there doesn't like that decision either.
